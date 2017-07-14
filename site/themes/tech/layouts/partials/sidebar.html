@@ -1,0 +1,56 @@
+
+<aside class="site">
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <div class="panel-title">
+        <span class="fa fa-clock-o"></span><h4>最近文章</h4>
+      </div>
+    
+    </div>
+    <div class="list-group">
+      {{ range first 10 .Site.Pages }}
+      <div class="list-group-item">
+      <i class="fa fa-file-o" aria-hidden="true"></i> <a href="{{ .Permalink }}" >{{ .Title }}</a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+  {{ range $key, $value := .Site.Taxonomies }}
+    {{ if eq $key "Categories" }}
+      <div class="panel panel-success">
+      <div class="panel-heading">
+        <div class="panel-title">
+        <i class="fa fa-bars" aria-hidden="true"></i><h4>{{ $key | singularize }}</h4>
+        </div>
+      </div>
+      <div class="list-group">
+        {{ range first 10 $value.ByCount }}
+        <div class="list-group-item">
+        <i class="fa fa-folder-o" aria-hidden="true"></i> <a href="{{ $.Site.BaseURL}}{{ $key }}/{{ .Name | urlize }}">{{ .Name | humanize }}</a>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+    {{ if eq $key "Tags" }}
+      <div class="panel panel-info">
+      <div class="panel-heading">
+        <div class="panel-title">
+        <i class="fa fa-tags" aria-hidden="true"></i></i><h4>{{ $key | singularize }}</h4>
+        </div>
+      </div>
+      <div class="list-group">
+        {{ range first 10 $value.ByCount }}
+        <div class="list-group-item">
+        <span aria-hidden="true">#</span><a href="{{ $.Site.BaseURL}}{{ $key }}/{{ .Name | urlize }}">{{ .Name }}</a>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  {{ end }}
+
+</aside>
+

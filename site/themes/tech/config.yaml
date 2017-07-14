@@ -1,0 +1,21 @@
+BaseUrl: "http://example.com"
+LanguageCode: "en-us"
+Title: "Beg"
+
+Params:
+  Author: "Frost Wong"
+  DateForm: "Mon, Jan 2, 2013"
+  GoogleAnalyticsUserID: "Your ID."
+  Twitter: "frostwong"
+  Github: "lovelock"
+  ShowRelatedPost: True
+  disqusShortname: "unixera"
+
+Indexes:
+  tag: "tags"
+
+permalinks:
+  post: /blog/:year/:month/:day/:title/
+
+MetadataFormat: "yaml"
+
