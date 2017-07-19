@@ -1,4 +1,4 @@
-baseurl = "http://subtlephp.netlify.com/"
+baseurl = "https://subtlephp.netlify.com/"
 languageCode = "en-us"
 title = "Me & Web"
 copyright = "(c) 2013-2016 Frost Wong. All rights reserved."
