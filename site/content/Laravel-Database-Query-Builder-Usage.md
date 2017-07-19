@@ -43,7 +43,7 @@ public function delete($where);
 
 这样做是因为闭包适合做统一处理.
 
-假设查询条件是 attribute = 2 and age > 20, 我就可以写成`[['attribute', '=', '2'], ['age', '>', 20]]`. 这样就可以写一个 builder 把它处理成 QueryBuilder .
+假设查询条件是 `attribute = 2 and age > 20`, 我就可以写成`[['attribute', '=', '2'], ['age', '>', 20]]`. 这样就可以写一个 builder 把它处理成 QueryBuilder .
 
 ```php
 // rev 01
