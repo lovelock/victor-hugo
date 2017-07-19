@@ -1,6 +1,6 @@
 +++
 categories = ["Php"]
-title  = "composer 问题小记"
+title  = "Composer 问题小记"
 date = "2017-07-14T22:41:18+08:00"
 author = "frostwong"
 type = "post"
